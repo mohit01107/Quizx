@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/cccba7b88e.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300&display=swap');
+ 
+  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;700&display=swap');
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: hsla(0, 3%, 83%, 0.392);
+        font-family: 'Hanken Grotesk', sans-serif;
+    }
+    .progress{
+        background-color: hsl(0, 0%, 100%);
+        width: 763px;
+        height: 470px;  
+   position: absolute;
+   top: 20%;
+   left: 23%;
+  
+   display: flex;
+   border-radius: 25px;
+    }
+    .left{
+        background: rgb(103,67,255);
+background: linear-gradient(180deg, rgba(103,67,255,1) 0%, rgba(49,35,250,1) 95%); 
+        width: 50%;
+        height: 100%;
+        border-radius: 28px;
+        padding: 24px;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .left h1{
+        text-align: center;
+        font-size: 24px;
+        color: rgb(237, 233, 255);
+       
+        
+    }
+    .left .circle {
+	height: 213px;
+	width: 221px;
+	background: rgb(53, 24, 132);
+	background: linear-gradient(125deg, rgba(95,63,252,1) 0%, rgb(54, 35, 204) 99%);
+	border-radius: 50%;
+    margin-top: 30px;
+    margin-left: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.left .circle h2{
+   font-size: 90px;
+   color: #f1f1f1;
+   font-weight:900;
+   font-family: 'Hanken Grotesk', sans-serif;
+   
+
+    
+}
+.left .circle span{
+    font-size: 16px;
+    font-weight: 500;
+    color: #f1f1f1;
+    margin-top: -10px;
+}
+.left .about_score{
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin-top: 25px;
+    
+
+
+}
+.left .about_score p{
+   
+    text-align: center;
+    font-size: 17px;
+    margin-top: 8px;
+    color: #f1f1f1;
+    letter-spacing: 1px;
+
+
+}
+.right{
+    width: 50%;
+    padding: 20px;
+   
+}
+.right h1{
+    margin-left: 15px;
+    font-size: 32px;
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.right .coloumn {
+	height: 57px;
+	width: 318px;
+	background-color: red;
+    border-radius: 7px;
+    display: flex;
+
+    align-items: center;
+}
+.status{
+    margin-left: 20px;
+    
+    font-weight: 600;
+  
+}
+.total_number{
+    display: inline-block;
+    margin-left: 131px;
+    font-weight: 600;
+}
+.total_number_one{
+    display: inline-block;
+    margin-left: 148px;
+    font-weight: 600;
+}
+.actual{
+    color: black;
+
+}
+.total{
+    color: #808080;
+}
+button{
+    margin-left: 15px;
+    margin-top: 24px;
+    width: 318px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(80,52,217);
+background: linear-gradient(125deg, rgba(80,52,217,1) 48%, rgba(135,206,235,1) 99%); 
+    color: #f1f1f1;
+    font-size: 18px;
+    letter-spacing: 1px;
+   transition-duration: 10s;
+    
+}
+button:hover{
+    background: rgb(135,206,235);
+background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 99%); 
+}
+.results{
+    display: none;
+}
+
+.firstscreen{
+    background-color: hsla(0, 3%, 83%, 0.392);
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.main{
+    background-color: rgb(203, 216, 218);
+    width: 694px;
+    height: 458px;  
+    border-radius: 10%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+       
+    
+} 
+.main-two{
+    background-color: rgb(203, 216, 218);
+    width: 694px;
+    height: 458px;  
+    border-radius: 10%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    
+       
+    
+} 
+#questi{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+@media (max-width:650px){
+    html{
+        height: 100%;
+    }
+    .firstscreen{
+        
+        width: 100%;
+
+    
+    }
+    .main,.main-two{
+        width: 92%;
+        box-sizing: border-box;
+        overflow: hidden;
+
+    }
+   
+    .option, .optiont{
+        width: 90%;
+    }
+    
+    .left{
+        width: 100%;
+    }
+    .progress{
+        position: static;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+  
+  transform: translate(none);
+    }
+    .left{
+        width: 100%;
+        border-radius: 0;
+        height: 343px;
+        border-radius: 14px;
+        margin-top: -10px;
+    }
+    .right{
+        width: 100%;
+        margin-left: 0;
+    }
+    .right .coloumn{
+        width: 100%;
+        margin-left: 0;
+    }
+    .right button{
+        width: 100%;
+        margin-left: 0;
+    }
+    .left .circle{
+        width: 100%;
+    }
+    .left .circle {
+        height: 138px;
+        width: 58%;
+        
+    }
+    .left .circle h2{
+        font-size: 69px;
+    }
+    .left .circle span{
+        font-size: 12px;
+    }
+    .left h2{
+        font-size: 68px;
+    }
+    .left h1{
+        margin-top: -10px;
+        font-size: 23px;
+
+    }
+
+    .right .contents{
+        margin-left: 0;
+
+    }
+    .right h1{
+        margin-left: 0;
+    }
+    .right .total_number{
+        margin-left: 89px;
+    }
+    .right .total_number_one{
+        margin-left: 105px;
+    }
+}
+
+</style>
+<body>
+    <div class="firstscreen">
+        <div class="main">
+            <h1 id="questi"> The lowest principal quantum number for an electron is:</h1>
+            <button class="option" id="op1">0</button>
+            <button class="option" id="op2">1</button>
+            <button class="option" id="op3">2</button>
+            <button class="option" id="op4">3</button> 
+            
+    </div>
+    <div class="main-two">
+        <div class="cont">
+        <h1 id="questi"> Number of orbital in p subshell is:</h1>
+            <button class="optiont" id="op1t">3</button>
+            <button class="optiont" id="op2t">1</button>
+            <button class="optiont" id="op3t">2</button>
+            <button class="optiont" id="op4t">7</button> 
+            </div>
+    </div>
+    <div class="results">
+    <div class="progress">
+        <div class="left">
+            <h1>Your Result</h1>
+            <div class="circle">
+                <h2 id="scii">00</h2>
+                <span>Of 20</span>
+            </div>
+            <div class="about_score">
+                <h1>Great</h1>
+                <p>You scored higher than 65% of    the people who have taken   these tests</p>
+            </div>
+        </div>
+        <div class="right">
+            <h1>Summary</h1>
+            <div class="contents">
+            <div class="coloumn" style="background-color: hsla(0, 100%, 67%, 0.251); color: hsl(0, 100%, 67%);">
+              <div class="status">
+                <i class="fa-solid fa-bolt"></i> &nbsp; 
+            <span>Reaction</span>
+        </div>
+            <div class="total_number">
+        <span class="actual">80</span>
+        <span class="total"> /100</span>
+    </div>
+
+        
+            
+            </div>
+            <div class="coloumn" style="background-color: hsla(39, 100%, 50%, 0.251); color: hsl(39, 100%, 56%);">
+                <div class="status">
+                <i class="fa-solid fa-brain"></i> &nbsp;
+            <span>Quantum Numbers</span>
+            </div>
+            <div class="total_number">
+                <span class="actual">00</span>
+                <span class="total"> /8</span>
+            </div>
+            
+            </div>
+            <div class="coloumn" style="background-color: hsla(166, 100%, 37%, 0.251);color: hsl(166, 100%, 37%);">
+                <div class="status">
+                <i class="fa-regular fa-message"></i>&nbsp;
+                <span></span>
+                </div>
+                <div class="total_number_one">
+                    <span class="actual">61</span>
+                    <span class="total"> /100</span>
+                </div>
+            
+            
+            </div>
+            <div class="coloumn" style="background-color: hsl(241, 100%, 89%,0.251); color: hsl(234, 85%, 45%);">
+                <div class="status">
+                <i class="fa-solid fa-eye"></i>&nbsp;
+                <span>Visual</span>
+            
+            </div>
+            <div class="total_number_one">
+                <span class="actual">72</span>
+                <span class="total"> /100</span>
+            </div>
+            </div>
+
+        </div>
+        <button>Continue</button>
+        </div>
+    </div>
+    </div>
+    <script>
+        let results = document.querySelector('.results');
+let maintwo = document.querySelector('.main-two');
+let main = document.querySelector('.main');
+
+let actual = document.querySelector('#scii');
+let options = document.querySelectorAll('.option');
+let optionst = document.querySelectorAll('.optiont');
+
+options.forEach(option => {
+    option.addEventListener('click', updateScore);
+});
+
+optionst.forEach(optiont => {
+    optiont.addEventListener('click', updateScoret);
+});
+
+function updateScore(event) {
+    if (event.target.id === 'op1') {
+        actual.textContent = parseInt(actual.textContent) + 4;
+    } else {
+        actual.textContent = parseInt(actual.textContent) - 1;
+    }
+    main.style.display = 'none';
+    maintwo.style.display = 'block';
+}
+
+function updateScoret(event) {
+    if (event.target.id === 'op1t') {
+        actual.textContent = parseInt(actual.textContent) + 4;
+    } else {
+        actual.textContent = parseInt(actual.textContent) - 1;
+    }
+    maintwo.style.display = 'none';
+    results.style.display = 'block';
+}
+
+
+
+    </script>
+    
+</body>
+</html>
