@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+v<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -118,8 +118,9 @@ background: linear-gradient(180deg, rgba(103,67,255,1) 0%, rgba(49,35,250,1) 95%
 	background-color: red;
     border-radius: 7px;
     display: flex;
-
+    justify-content: space-between;
     align-items: center;
+    padding: 15px;
 }
 .status{
     margin-left: 20px;
@@ -129,7 +130,7 @@ background: linear-gradient(180deg, rgba(103,67,255,1) 0%, rgba(49,35,250,1) 95%
 }
 .total_number{
     display: inline-block;
-    margin-left: 131px;
+    
     font-weight: 600;
 }
 .total_number_one{
@@ -174,6 +175,8 @@ background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 9
     align-items: center;
     justify-content: center;
     height: 100vh;
+    flex-direction: column;
+
 }
 .main{
     background-color: rgb(203, 216, 218);
@@ -184,6 +187,7 @@ background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 9
     display: flex;
     align-items: center;
     flex-direction: column;
+    
        
     
 } 
@@ -232,6 +236,18 @@ background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 9
     flex-direction: column;
     display: none;   
 } 
+.main-six,.main-seven, .main-eight,.main-nine{
+    background-color: rgb(203, 216, 218);
+    width: 694px;
+    height: 458px;  
+    border-radius: 10%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;   
+} 
+
 #questi{
     font-size: 24px;
     margin-bottom: 20px;
@@ -241,6 +257,26 @@ background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 9
     align-items: center;
     flex-direction: column;
     display: flex;
+}
+#timer{
+    background-color: orange;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 18px;
+margin-bottom: 10px;
+    
+    height: 100px;
+	width: 100px;
+	border-radius: 50%;
+    margin-top: 30px;
+    margin-left: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
 }
 
 @media (max-width:650px){
@@ -339,7 +375,12 @@ background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 9
 
 </style>
 <body>
+    
     <div class="firstscreen">
+        <div id="timer">
+
+            Time Left: <span id="time">120 sec</span> 
+        </div>
         <div class="main">
             <h1 id="questi"> The lowest principal quantum number for an electron is:</h1>
             <button class="option" id="op1">0</button>
@@ -387,13 +428,55 @@ background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 9
             <button class="optiontool" id="op4tool">Kinetic energy</button> 
             </div>
             </div>
+
+            <div class="main-six">
+                <div class="cont">
+                <h1 id="questi">If the slope is zero, the motion is said to have which accelration?</h1>
+                    <button class="optiontooli" id="op1tooli">Increasing</button>
+                    <button class="optiontooli" id="op2tooli">Decreasing</button>
+                    <button class="optiontooli" id="op3tooli">Constant</button>
+                    <button class="optiontooli" id="op4tooli">None of these</button> 
+                    </div>
+                    </div>
+
+                    <div class="main-seven">
+                        <div class="cont">
+                        <h1 id="questi">Boyle’s law is valid only for:</h1>
+                            <button class="optiontoolis" id="op1toolis">Ideal gases</button>
+                            <button class="optiontoolis" id="op2toolis">Real gases</button>
+                            <button class="optiontoolis" id="op3toolis">Light gases</button>
+                            <button class="optiontoolis" id="op4toolis">Heavy gases</button> 
+                            </div>
+                            </div>
+
+                            <div class="main-eight">
+                                <div class="cont">
+                                <h1 id="questi">Which is not a unit of pressure:</h1>
+                                    <button class="optiontoolish" id="op1toolish">Bar</button>
+                                    <button class="optiontoolish" id="op2toolish">N/m</button>
+                                    <button class="optiontoolish" id="op3toolish">kg/m</button>
+                                    <button class="optiontoolish" id="op4toolish">Torr</button> 
+                                    </div>
+                                    </div>
+
+                                    <div class="main-nine">
+                                        <div class="cont">
+                                        <h1 id="questi">The S.I unit of Temperature is:</h1>
+                                            <button class="optiontoolishe" id="op1toolishe">Celsius</button>
+                                            <button class="optiontoolishe" id="op2toolishe">Kelvin</button>
+                                            <button class="optiontoolishe" id="op3toolishe">Farhenheit</button>
+                                            <button class="optiontoolishe" id="op4toolishe">Centigrade</button> 
+                                            </div>
+                                            </div>
+
+
     <div class="results">
     <div class="progress">
         <div class="left">
             <h1>Your Result</h1>
             <div class="circle">
                 <h2 id="scii">00</h2>
-                <span>Of 20</span>
+                <span>Of 36</span>
             </div>
             <div class="about_score">
                 <h1>Great</h1>
@@ -405,12 +488,12 @@ background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 9
             <div class="contents">
             <div class="coloumn" style="background-color: hsla(0, 100%, 67%, 0.251); color: hsl(0, 100%, 67%);">
               <div class="status">
-                <i class="fa-solid fa-bolt"></i> &nbsp; 
-            <span>Reaction</span>
+                
+            <span>Inorganic</span>
         </div>
             <div class="total_number">
-        <span class="actual">80</span>
-        <span class="total"> /100</span>
+        <span id="ioc" class="actual">00</span>
+        <span class="total"> /12</span>
     </div>
 
         
@@ -418,45 +501,43 @@ background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 9
             </div>
             <div class="coloumn" style="background-color: hsla(39, 100%, 50%, 0.251); color: hsl(39, 100%, 56%);">
                 <div class="status">
-                <i class="fa-solid fa-brain"></i> &nbsp;
-            <span>Quantum Numbers</span>
+                
+            <span>Physics</span>
             </div>
             <div class="total_number">
-                <span class="actual">00</span>
-                <span class="total"> /8</span>
+                <span class="actual"    id="phy">00</span>
+                <span class="total"> /12</span>
             </div>
             
             </div>
             <div class="coloumn" style="background-color: hsla(166, 100%, 37%, 0.251);color: hsl(166, 100%, 37%);">
                 <div class="status">
-                <i class="fa-regular fa-message"></i>&nbsp;
-                <span></span>
+                
+                <span>Physical</span>
                 </div>
                 <div class="total_number_one">
-                    <span class="actual">61</span>
-                    <span class="total"> /100</span>
+                    <span class="actual" id="pc">00</span>
+                    <span class="total"> /12</span>
                 </div>
             
             
             </div>
             <div class="coloumn" style="background-color: hsl(241, 100%, 89%,0.251); color: hsl(234, 85%, 45%);">
                 <div class="status">
-                <i class="fa-solid fa-eye"></i>&nbsp;
-                <span>Visual</span>
+                
+                <span>Math</span>
             
             </div>
             <div class="total_number_one">
-                <span class="actual">72</span>
-                <span class="total"> /100</span>
+                <span class="actual">00</span>
+                <span class="total"> /00</span>
             </div>
             </div>
 
         </div>
-	 html
-<a href="https://www.youtube.com/shorts/l8X3Ez0_F_E "  target="_blank">
+        <a href="https://www.youtube.com/shorts/l8X3Ez0_F_E "  target="_blank">
   <button>Continue</button>
 </a>
-
         </div>
     </div>
     </div>
@@ -465,13 +546,39 @@ background: linear-gradient(125deg, rgba(135,206,235,1) 48%, rgba(80,52,217,1) 9
 let maintwo = document.querySelector('.main-two');
 let main = document.querySelector('.main');
 let mainfive = document.querySelector('.main-five');
+let mainsix = document.querySelector('.main-six');
+let mainseven = document.querySelector('.main-seven');
+let maineight = document.querySelector('.main-eight');
+let mainnine = document.querySelector('.main-nine');
+
+
+
+
 
 let actual = document.querySelector('#scii');
+let ioc = document.querySelector('#ioc');
+let phy = document.querySelector('#phy');
+let pc = document.querySelector('#pc');
+
+
+
+
+
 let options = document.querySelectorAll('.option');
 let optionst = document.querySelectorAll('.optiont');
 let optionsto = document.querySelectorAll('.optionto');
 let optionstoo = document.querySelectorAll('.optiontoo');
 let optionstool = document.querySelectorAll('.optiontool');
+let optionstooli = document.querySelectorAll('.optiontooli');
+let optionstoolis = document.querySelectorAll('.optiontoolis');
+let optionstoolish = document.querySelectorAll('.optiontoolish');
+let optionstoolishe = document.querySelectorAll('.optiontoolishe');
+
+
+
+
+
+
 
 
 
@@ -499,11 +606,29 @@ optionstool.forEach(optiontool => {
     optiontool.addEventListener('click', updateScoretool);
 });
 
+optionstooli.forEach(optiontooli => {
+    optiontooli.addEventListener('click', updateScoretooli);
+});
+
+optionstoolis.forEach(optiontoolis => {
+    optiontoolis.addEventListener('click', updateScoretoolis);
+});
+
+optionstoolish.forEach(optiontoolish => {
+    optiontoolish.addEventListener('click', updateScoretoolish);
+});
+
+optionstoolishe.forEach(optiontoolishe => {
+    optiontoolishe.addEventListener('click', updateScoretoolishe);
+});
+
 function updateScore(event) {
-    if (event.target.id === 'op1') {
+    if (event.target.id === 'op2') {
         actual.textContent = parseInt(actual.textContent) + 4;
+        ioc.textContent = parseInt(ioc.textContent) + 4;
     } else {
         actual.textContent = parseInt(actual.textContent) - 1;
+        ioc.textContent = parseInt(ioc.textContent) - 1;
     }
     main.style.display = 'none';
     maintwo.style.display = 'block';
@@ -512,8 +637,12 @@ function updateScore(event) {
 function updateScoret(event) {
     if (event.target.id === 'op1t') {
         actual.textContent = parseInt(actual.textContent) + 4;
+        ioc.textContent = parseInt(ioc.textContent) + 4;
+
     } else {
         actual.textContent = parseInt(actual.textContent) - 1;
+        ioc.textContent = parseInt(ioc.textContent) - 1;
+
     }
     maintwo.style.display = 'none';
     mainthree.style.display='block';
@@ -523,8 +652,12 @@ function updateScoret(event) {
 function updateScoreto(event) {
     if (event.target.id === 'op3to') {
         actual.textContent = parseInt(actual.textContent) + 4;
+        ioc.textContent = parseInt(ioc.textContent) + 4;
+
     } else {
         actual.textContent = parseInt(actual.textContent) - 1;
+        ioc.textContent = parseInt(ioc.textContent) - 1;
+
     }
     
     mainthree.style.display='none';
@@ -535,8 +668,12 @@ function updateScoreto(event) {
 function updateScoretoo(event) {
     if (event.target.id === 'op1too') {
         actual.textContent = parseInt(actual.textContent) + 4;
+        phy.textContent = parseInt(phy.textContent) + 4;
+
     } else {
         actual.textContent = parseInt(actual.textContent) - 1;
+        phy.textContent = parseInt(phy.textContent) - 1;
+
     }
     
     
@@ -547,16 +684,128 @@ function updateScoretoo(event) {
 function updateScoretool(event) {
     if (event.target.id === 'op4tool') {
         actual.textContent = parseInt(actual.textContent) + 4;
+        phy.textContent = parseInt(phy.textContent) + 4;
+
     } else {
         actual.textContent = parseInt(actual.textContent) - 1;
+        phy.textContent = parseInt(phy.textContent) - 1;
+    }
+
+    // Update score-related text or actions if needed
+
+    // Hide the fifth screen
+    mainfive.style.display = 'none';
+
+    // Show the sixth screen
+    mainsix.style.display = 'block';
+
+    // Update any other content as needed
+}
+
+function updateScoretooli(event) {
+    if (event.target.id === 'op3tooli') {
+        actual.textContent = parseInt(actual.textContent) + 4;
+        phy.textContent = parseInt(phy.textContent) + 4;
+
+    } else {
+        actual.textContent = parseInt(actual.textContent) - 1;
+
+        phy.textContent = parseInt(phy.textContent) - 1;
     }
     
     
-    holu.textContent="You scored "+actual.textContent +" in this test";
-     mainfive.style.display='none';
-     results.style.display = 'block';
+    // holu.textContent="You scored "+actual.textContent +" out of 42 marks in this test";
+       mainsix.style.display='none';
+       mainseven.style.display='block';
+
+            // results.style.display = 'block';   
 
 }
+
+function updateScoretoolis(event) {
+    if (event.target.id === 'op1toolis') {
+        actual.textContent = parseInt(actual.textContent) + 4;
+        pc.textContent = parseInt(pc.textContent) + 4;
+
+    } else {
+        actual.textContent = parseInt(actual.textContent) - 1;
+
+        pc.textContent = parseInt(pc.textContent) - 1;
+    }
+    
+    
+    // holu.textContent="You scored "+actual.textContent +" out of 48 marks in this test";
+    mainseven.style.display='none';
+    maineight.style.display='block';
+
+
+       
+            //  results.style.display = 'block';   
+
+}
+
+
+function updateScoretoolish(event) {
+    if (event.target.id === 'op3toolish') {
+        actual.textContent = parseInt(actual.textContent) + 4;
+        pc.textContent = parseInt(pc.textContent) + 4;
+
+    } else {
+        actual.textContent = parseInt(actual.textContent) - 1;
+
+        pc.textContent = parseInt(pc.textContent) - 1;
+    }
+    
+    
+    // holu.textContent="You scored "+actual.textContent +" out of 48 marks in this test";
+       maineight.style.display='none';
+       mainnine.style.display='block';
+
+            //   results.style.display = 'block'; 
+}
+
+function updateScoretoolishe(event) {
+    if (event.target.id === 'op2toolishe') {
+        actual.textContent = parseInt(actual.textContent) + 4;
+        pc.textContent = parseInt(pc.textContent) + 4;
+
+    } else {
+        actual.textContent = parseInt(actual.textContent) - 1;
+
+        pc.textContent = parseInt(pc.textContent) - 1;
+    }
+    
+    
+     holu.textContent="You scored "+actual.textContent +" out of 36 marks in this test";
+    //    maineight.style.display='none';
+       mainnine.style.display='none';
+
+             results.style.display = 'block'; 
+}
+
+const timeLimit = 120;
+
+let timeLeft = timeLimit;
+const timeElement = document.getElementById('time');
+
+// Update the timer every second
+const timerInterval = setInterval(() => {
+    timeLeft--;
+    timeElement.textContent = timeLeft;
+    
+    if (timeLeft === 0) {
+        clearInterval(timerInterval);
+        // Time's up! Handle what happens when the time limit is reached
+        alert('Time is up!');
+    }
+}, 1000);
+
+const submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', () => {
+    clearInterval(timerInterval); // Stop the timer when the user submits
+    // Process the user's answers and provide feedback
+    // You can also navigate to the next question or show the results
+});
 
 
 
